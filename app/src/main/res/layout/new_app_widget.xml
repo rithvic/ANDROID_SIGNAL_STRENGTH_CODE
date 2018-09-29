@@ -1,0 +1,175 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:background="#455A64"
+    android:padding="@dimen/widget_margin"
+    android:gravity="center_vertical"
+    android:id="@+id/widget_view">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/SIM1_view">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIM 1"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <!--<com.github.anastr.speedviewlib.PointerSpeedometer-->
+                <!--android:id="@+id/first_sim_widget_speedometer"-->
+                <!--android:layout_width="match_parent"-->
+                <!--app:sv_speedometerMode="TOP"-->
+                <!--app:sv_indicator="NeedleIndicator"-->
+                <!--android:layout_height="300dp"-->
+                <!--android:layout_margin="3dp"-->
+                <!--app:sv_backgroundCircleColor="#00ffffff"-->
+                <!--app:sv_indicatorColor="#ffffff"-->
+                <!--app:sv_tickNumber="10"-->
+                <!--app:sv_unit="%"-->
+                <!--app:sv_speedTextFormat="INTEGER"-->
+                <!--app:sv_maxSpeed="100"-->
+
+                <!--/>-->
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:background="@drawable/circle_shape"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="100"
+                android:progress="0"/>
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0%"
+                android:layout_centerInParent="true"
+                android:textColor="#007DD6"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sim1_operator"
+            android:text="Airtel"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/SIM2_view">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SIM 2"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="15dp"/>
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp">
+
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:background="@drawable/circle_shape"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="100"
+                android:progress="0"/>
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0%"
+                android:layout_centerInParent="true"
+                android:textColor="#007DD6"
+                android:textSize="15sp"
+                tools:ignore="DuplicateIds" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sim2_operator"
+            android:text="Vodafone"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="WIFI"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="15dp"/>
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/wifilogo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/signal_level"
+            android:text="Good"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="15dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

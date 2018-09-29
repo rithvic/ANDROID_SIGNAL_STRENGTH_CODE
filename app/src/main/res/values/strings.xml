@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Signal Strength</string>
+
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="nav_about_us">Feedback</string>
+    <string name="nav_privacy_policy">Privacy Policy</string>
+
+    <string-array name="titles">
+
+        <item>Dashboard</item>
+        <item>History</item>
+
+    </string-array>
+
+    <array name="menu_icons">
+        <item>@drawable/ic_home_black</item>
+        <item>@drawable/ic_search_black</item>
+    </array>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>>
+
+
+</resources>

@@ -1,0 +1,1911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/bg"
+
+    android:scaleType = "centerCrop"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/modeselection"
+                android:layout_width="50dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/normalmode" />
+
+            <TextView
+                android:id="@+id/mode_text_view"
+                android:layout_marginTop="3dp"
+                android:layout_marginRight="20dp"
+                android:textSize="12sp"
+                android:fontFamily="@font/latoregular"
+                android:layout_width="wrap_content"
+                android:textColor="@color/whitecolor"
+                android:text="Normal Mode"
+                android:layout_gravity="right"
+                android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+
+                android:id="@+id/secondlayout1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Sim1TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/latoregular"
+                    android:text="Sim1"
+                    android:textAlignment="center"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/signalstrenth_img"
+                            android:layout_width="180dp"
+                            android:layout_height="180dp"
+                            android:layout_alignParentTop="false"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/signalzero"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/sim_1_strength"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:text="00"
+                            android:textSize="60sp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <com.github.anastr.speedviewlib.PointerSpeedometer
+                    android:id="@+id/first_sim_speedometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="3dp"
+                    android:visibility="gone"
+                    app:sv_backgroundCircleColor="#00ffffff"
+                    app:sv_indicator="NoIndicator"
+                    app:sv_indicatorColor="@color/TransparentColor"
+                    app:sv_maxSpeed="100"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_tickNumber="10"
+                    app:sv_unit="%" />
+
+                <com.quadrobay.qbayApps.networkproject.SingletonClass.CustomSpeedometer
+
+                    android:id="@+id/first_sim_speedometers"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="3dp"
+                    android:visibility="gone"
+
+                    app:sv_backgroundCircleColor="#00ffffff"
+                    app:sv_centerCircleColor="@color/bluecolor"
+                    app:sv_indicator="NoIndicator"
+                    app:sv_indicatorColor="@color/TransparentColor"
+                    app:sv_maxSpeed="100"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_tickNumber="10"
+                    app:sv_unit="%" />
+
+                <TextView
+                    android:id="@+id/SignalLevelTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/latoregular"
+
+                    android:text="Not Available"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="18sp"
+
+                    />
+
+
+                <LinearLayout
+                    android:id="@+id/sim1_adavance_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:text="dbm"
+
+
+                        android:textAlignment="center"
+                        android:textColor="@color/whitecolor" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:text="asu"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sim1_advancemode1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/firstsim_signallevel_imageview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/nostrengthsignal" />
+
+                        <TextView
+                            android:id="@+id/firstsim_dbm_txtview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:paddingStart="2dp"
+                            android:text="0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/whitecolor"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+
+                            android:id="@+id/firstsim_asu_img"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/nostrengthsignal" />
+
+                        <TextView
+                            android:id="@+id/firstsim_asu_txtview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:paddingStart="3dp"
+                            android:text="0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/whitecolor"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/firstsim_dbm_txtview"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:paddingTop="15dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="18dp"-->
+                <!--android:text="0"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="20dp"-->
+                <!--android:text="dbm"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/firstsim_signallevel_imageview"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:src="@drawable/nostrengthsignal"/>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/firstsim_asu_txtview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:paddingTop="15dp"-->
+                <!--android:textSize="18dp"-->
+                <!--android:text="0"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="20dp"-->
+                <!--android:text="Asu"/>-->
+
+                <!--</LinearLayout>-->
+
+
+                <!--</LinearLayout>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--&gt;-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Net. operator"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Net.type"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Sim Operator"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp"-->
+                <!--/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Net. Strength"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="Data State"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Roaming"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Net. country"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="Sim country"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+            </LinearLayout>
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="0dp"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:layout_weight="1"-->
+                        <!--android:orientation="vertical"-->
+                        <!--&gt;-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/NetworkOperatorTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/NetworkTypeTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/SimOperatorTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp"-->
+
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/NetworkStrengthTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/DataStateTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp"-->
+                    <!--/>-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/RoamingTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/NetworkCountryTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/SimCountryTextView"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginTop="10dp"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:text=": Not Available"-->
+                    <!--android:textColor="@color/whitecolor"-->
+                    <!--android:textSize="13sp" />-->
+
+                    <!--</LinearLayout>-->
+
+                <!--</LinearLayout>-->
+
+            <!--</LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/secondview1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/Sim2TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+
+                    android:fontFamily="@font/latoregular"
+                    android:text="Sim2"
+                    android:textAlignment="center"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="16sp" />
+
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/sim2signalstrent"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/signalzero"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/sim2_strength"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:text="00"
+                        android:textSize="60sp" />
+
+
+                </RelativeLayout>
+
+                <com.github.anastr.speedviewlib.PointerSpeedometer
+                    android:id="@+id/second_sim_speedometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_margin="3dp"
+                    android:visibility="gone"
+                    app:sv_backgroundCircleColor="#00ffffff"
+                    app:sv_indicator="NeedleIndicator"
+                    app:sv_indicatorColor="#ffffff"
+                    app:sv_maxSpeed="100"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_tickNumber="10"
+                    app:sv_unit="%" />
+
+                <TextView
+                    android:id="@+id/Second_Sim_Signal_Level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/latoregular"
+                    android:text="Not Available"
+                    android:textAlignment="center"
+                    android:textColor="@color/whitecolor"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/sim2_advance_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:text="dbm"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:text="asu"
+
+                        android:textAlignment="center"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/sim2_advancemode1"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/secondsim_signallevel_imageview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/nostrengthsignal" />
+
+                        <TextView
+                            android:id="@+id/secondsim_dbm_txtview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:paddingStart="3dp"
+                            android:text="0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/whitecolor"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+
+                            android:id="@+id/secondsimasuvalue"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:src="@drawable/nostrengthsignal" />
+
+                        <TextView
+                            android:id="@+id/second_sim_asu_txtview"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:paddingStart="3dp"
+                            android:text="0"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/whitecolor"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="70dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/secondsim_dbm_txtview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:paddingTop="15dp"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="18dp"-->
+                <!--android:text="0"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="20dp"-->
+                <!--android:text="dbm"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--<ImageView-->
+                <!--android:id="@+id/secondsim_signallevel_imageview"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:src="@drawable/nostrengthsignal"/>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical">-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/second_sim_asu_txtview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:paddingTop="15dp"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="18dp"-->
+                <!--android:text="0"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="20dp"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:text="Asu"/>-->
+
+                <!--</LinearLayout>-->
+
+
+                <!--</LinearLayout>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--&gt;-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+
+                <!--<TextView-->
+
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Net. Operator"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Sim Operator"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Net. Strength"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Roaming"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Data State"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Net. type"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Net. country"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text="Sim country"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--</LinearLayout>-->
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_weight="1"-->
+                <!--android:orientation="vertical"-->
+                <!--&gt;-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Second_Sim_Net_Op"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Second_Sim_Operator"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Second_Sim_Net_Strn"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Secon_Sim_Roaming"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Second_Sim_Data_State"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Secon_Sim_Net_Typ"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Second_Sim_Net_Country"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/Second_Sim_Country"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_weight="2"-->
+                <!--android:text=": Not Available"-->
+                <!--android:textColor="@color/whitecolor"-->
+                <!--android:textSize="13sp" />-->
+
+                <!--</LinearLayout>-->
+                <!--</LinearLayout>-->
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/secondtextview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:text="Sim1"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/secondview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:text="Sim2"
+                        android:textColor="@color/whitecolor"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/secondlayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Net. Operator:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/NetworkOperatorTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Net. Operator:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/Second_Sim_Net_Op"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Net. type:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/NetworkTypeTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Net. type:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/Secon_Sim_Net_Typ"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Sim Operator:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/SimOperatorTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Sim Operator:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/Second_Sim_Operator"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Net. Strength:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/NetworkStrengthTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Net. Strength:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/Second_Sim_Net_Strn"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Data State:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/DataStateTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+                            android:paddingLeft="10dp"
+                            android:text="Data State:"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/Second_Sim_Data_State"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/latoregular"
+                            android:gravity="center"
+
+                            android:text="Not Available"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/white"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="15dp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/singlesimview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/textframe"
+
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Net. Operator:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/singlesimnetoperator"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Net. type:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/singlesimnettype"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Sim Operator:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/singledimoperator"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Net. Strength:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/singlesimnetstrength"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Data State:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:id="@+id/singlesimedatastate"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/doublesimview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/textframe"
+
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Net. Operator:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/doublesimnetoperator"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Net. type:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/doublesimnettype"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/textframe"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Sim Operator:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/doublesimoperator"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Net. Strength:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/doublesimnetstrength"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/textframe"
+                    android:orientation="horizontal">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="10dp"
+                        android:text="Data State:"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                    <TextView
+
+                        android:id="@+id/doublesimedatastate"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/latoregular"
+                        android:gravity="center"
+                        android:paddingLeft="12sp"
+                        android:text="Not Available"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

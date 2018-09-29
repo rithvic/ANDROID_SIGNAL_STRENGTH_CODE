@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/testing_main_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/navigation_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/mobiletes_details_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:overScrollMode="never"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_marginTop="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/mobiletest_details_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/navigation_background"
+
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+
+
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!--<com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar-->
+        <!--android:id="@+id/test_progress"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="25dp"-->
+        <!--app:rcProgress="50"-->
+        <!--app:rcMax="100"-->
+        <!--app:rcRadius="10dp"-->
+        <!--app:rcBackgroundPadding="2dp"-->
+        <!--app:rcProgressColor="@color/whitecolor"-->
+        <!--app:rcBackgroundColor="@color/GreyColor" />-->
+
+    <com.shuhart.stepview.StepView
+        android:id="@+id/step_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        app:stepsNumber="4"
+        app:selectedCircleColor="@color/whitecolor"
+        app:selectedTextColor="@color/whitecolor"
+        app:stepLineWidth="1dp"
+        app:stepPadding="4dp"
+        app:nextTextColor="@color/GreyColor"
+        app:nextStepLineColor="@color/GreyColor"
+        app:doneStepLineColor="@color/whitecolor"
+        app:doneCircleColor="@color/navigation_background"
+        app:doneTextColor="@color/whitecolor"
+        app:doneCircleRadius="12dp"
+        app:selectedCircleRadius="15dp"
+        app:selectedStepNumberColor="@color/BlueColor"
+        app:stepViewStyle="@style/StepView"
+        app:doneStepMarkColor="@color/whitecolor"
+        app:stepNumberTextSize="12sp"
+        app:animationType="All"
+        android:typeface="@font/roboto_italic"/>
+
+    <!--<ImageView-->
+        <!--android:layout_weight="1"-->
+        <!--android:id="@+id/test_indicator_imageview"-->
+        <!--android:src="@drawable/mobiletestlogo"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="150dp" />-->
+
+    <ch.halcyon.squareprogressbar.SquareProgressBar
+        android:id="@+id/sprogressbar"
+        android:layout_weight="1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+         >
+    </ch.halcyon.squareprogressbar.SquareProgressBar>
+
+
+    <TextView
+        android:id="@+id/text_guide"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:text="Test your mobile status this will guide you through the series of testing screen "
+        android:textColor="@color/whitecolor"
+        android:textSize="20sp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:visibility="visible"
+        android:paddingTop="15dp"
+        android:layout_weight="1"
+        android:textColor="@color/whitecolor"
+        android:textAlignment="center"
+        android:id="@+id/test_status"
+        android:layout_width="match_parent"
+        android:textSize="20sp"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:textColor="@color/BlackColor"
+        android:background="@color/whitecolor"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:id="@+id/common_btn"
+        android:layout_width="150dp"
+        android:layout_height="40dp" />
+
+    <LinearLayout
+        android:id="@+id/color_btn_layout"
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/red_button"
+            android:drawableStart="@drawable/redcolorbtn"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/whitecolor"
+            android:text="Red"
+            android:textColor="@color/BlackColor"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/green_button"
+            android:drawableStart="@drawable/greencolorbtn"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/whitecolor"
+            android:text="Green"
+            android:textColor="@color/BlackColor"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/blue_button"
+            android:drawableStart="@drawable/bluecolorbtn"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/whitecolor"
+            android:text="Blue"
+            android:textColor="@color/BlackColor"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/brightness_layout"
+        android:layout_width="300dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageButton
+            android:id="@+id/brightness_decrease_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#eac117"
+            android:scaleType="fitXY"
+            android:src="@drawable/brightnessdecrease" />
+
+        <SeekBar
+            android:id="@+id/brightness_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:progressTint="@color/whitecolor"
+            android:thumbTint="@color/whitecolor" />
+
+        <ImageButton
+            android:id="@+id/brightness_increase_btn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#eac117"
+            android:scaleType="fitXY"
+            android:src="@drawable/brightnessincrease" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/main_button_layout"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/reset_button"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/whitecolor"
+            android:text="Reset"
+            android:textColor="@color/BlackColor"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/back_button"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/whitecolor"
+            android:text="Back"
+            android:textColor="@color/BlackColor"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/next_button"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@color/whitecolor"
+            android:text="Begin Test"
+            android:textColor="@color/BlackColor"
+            android:layout_width="100dp"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <TextureView
+        android:visibility="gone"
+        android:id="@+id/camera_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/sensor_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/gyroscope_layout"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/gyroscope_img_view"
+                android:src="@drawable/compassinline"
+                android:layout_centerInParent="true"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <ImageView
+                android:layout_centerInParent="true"
+                android:src="@drawable/compassoutline"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_weight="1"
+        android:id="@+id/touch_layout"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"/>
+
+</LinearLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ViewPagerHeight">465dp</dimen>
+    <dimen name="TestSpeedImage">30dp</dimen>
+    <dimen name="WidgetWidth">720dp</dimen>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="ViewPagerHeight">464dp</dimen>
+    <dimen name="WidgetWidth">1080dp</dimen>
+
+</resources>

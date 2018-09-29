@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingTop="40dp"
+
+    android:background="#F2F2F2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_margin="5dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/qbrpc" />
+
+
+    <LinearLayout
+        android:background="@color/BlackColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:id="@+id/dashlayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/shapeofmewnu"
+
+
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:clickable="false"
+                android:src="@drawable/dashboard" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fontFamily="@font/latoregular"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+
+                android:text="Dashboard"
+
+                android:textAlignment="textStart"
+
+                android:textColor="@color/BlackColor"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:id="@+id/historylayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@drawable/whitedesign"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:clickable="false"
+                android:src="@drawable/history" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fontFamily="@font/latoregular"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+
+                android:text="History"
+
+                android:textAlignment="textStart"
+
+                android:textColor="@color/BlackColor"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/currentreportlayout"
+
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+
+            android:background="@drawable/shapeofmewnu"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:clickable="false"
+                android:src="@drawable/report" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fontFamily="@font/latoregular"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+
+                android:text="Current Report"
+
+                android:textAlignment="textStart"
+
+                android:textColor="@color/BlackColor"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/settinglayout"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+
+            android:background="@drawable/whitedesign"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:clickable="false"
+                android:src="@drawable/settings" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fontFamily="@font/latoregular"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+
+                android:text="Settings"
+
+                android:textAlignment="textStart"
+
+                android:textColor="@color/BlackColor"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/logoutlayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+
+            android:background="@drawable/shapeofmewnu"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:clickable="false"
+                android:src="@drawable/logout" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fontFamily="@font/latoregular"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+
+                android:text="Logout"
+
+                android:textAlignment="textStart"
+
+                android:textColor="@color/BlackColor"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/feedbacklayout"
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+
+
+            android:background="@drawable/whitedesign"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:clickable="false"
+                android:src="@drawable/feedback" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="false"
+                android:fontFamily="@font/latoregular"
+                android:gravity="center"
+                android:paddingLeft="15dp"
+
+                android:text="Feedback"
+
+                android:textAlignment="textStart"
+
+                android:textColor="@color/BlackColor"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/whitecolor"
+    android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:paddingLeft="10dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/latoregular"
+        android:text="Updated on: "
+        android:textColor="@color/BlackColor"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/text11"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/latoregular"
+        android:text="No data"
+        android:textColor="@color/BlackColor"
+        android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="3dp"
+        android:background="@color/BlackColor" />
+
+</LinearLayout>
